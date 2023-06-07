@@ -15,7 +15,7 @@ function App() {
   async function handleSumbit(e) {
     e.preventDefault();
 
-    const response = await axios.post('http://localhost:5050/api/seatBook',{numberOfseats})
+    const response = await axios.post('https://backendtrainseat.onrender.com/api/seatBook',{numberOfseats})
     console.log(response.data)
     
     setNumberOfseats("")
@@ -57,7 +57,7 @@ function App() {
 // fetching latest data updated in database
   async function fetchData() {
     try {
-      const response= await axios.get('http://localhost:5050/api/getData')
+      const response= await axios.get('https://backendtrainseat.onrender.com/api/getData')
      setSeatsMap(response.data)
     //  console.log(response.data)
     } catch (error) {
@@ -72,7 +72,7 @@ function App() {
 
     //This is just to reset DB with initial value.
     setseatNumbers([])
-    await axios.delete('http://localhost:5050/api/resetData')
+    await axios.delete('https://backendtrainseat.onrender.com/api/resetData')
    
    
 
