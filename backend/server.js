@@ -1,10 +1,12 @@
 const express = require('express');
 const cors = require('cors');
 const connectDb = require('./Db/databaseConnection')
-const {ticketBookingController, seatController} = require('./Controller/ticketController')
+const {ticketBookingController, seatController, resetController} = require('./Controller/ticketController')
 const dotenv= require('dotenv');
 const seeder = require('./seeder')
-// Create an Express app
+
+
+
 const app = express();
 
 dotenv.config();
@@ -29,10 +31,14 @@ app.use(express.json());
 
 
 
-//api routes to get number to seats and response accordingly
+//api route to get number of seats and response accordingly
 app.post('/api/seatBook', ticketBookingController)
+
+//Api route to get all data from database
 app.get('/api/getData', seatController)
-app.delete('/api/resetData',()=> seeder())
+
+//Api route to reset all data in database
+app.delete('/api/resetData',resetController)
 
 //server running on port 5050
 

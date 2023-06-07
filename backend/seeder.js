@@ -14,8 +14,8 @@ const seeder = async()=>{
         }
             
 
+        //To display some seats are already booked in dataBase
         const randomNumbers = [];
-
         for (let i = 0; i < 10; i++) {
             // Generate a random number between 1 and 80
             const randomNumber = Math.floor(Math.random() * 80) + 1;
@@ -27,12 +27,16 @@ const seeder = async()=>{
             }
         }
 
+        //Marking those random generated Seatnumber as true in db
         for(let nums of randomNumbers){
             seats[nums].booked=true;
         }
 
             
-        const res= await TrainSeat.insertMany(seats);
+        await TrainSeat.insertMany(seats);
+
+
+    
     
    
 }
