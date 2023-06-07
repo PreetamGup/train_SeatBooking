@@ -1,7 +1,7 @@
 import "./App.css";
-import { useState, useEffect, Fragment } from "react";
+import { useState, useEffect } from "react";
 import axios from "axios";
-import {LuArmchair} from 'react-icons/lu'
+
 import React from "react";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -96,7 +96,7 @@ function App() {
             value={numberOfseats}
             placeholder="Enter Number of Seats"
             onChange={(e) => setNumberOfseats(e.target.value)}
-            style={{width:'140px'}}
+            style={{width:'150px'}}
           />
           <br />
           <button type="submit">Submit</button>

@@ -55,8 +55,8 @@
 .Booked{
   
   border: 2px solid black;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
   background-color: red;
   /* color: red; */
 }
@@ -65,9 +65,23 @@
   /* color: grey; */
   background-color: #61dafb;
   border: 2px solid black;
-  width: 2rem;
-  height: 2rem;
+  width: 1.5rem;
+  height: 1.5rem;
 }
+
+
+button{
+  background-color: lightgreen;
+  border-radius: 3px;
+  margin: 2px;
+  color: black;
+}
+
+button:hover{
+  background-color: black;
+  color: white;
+}
+
 
 @keyframes App-logo-spin {
   from {
