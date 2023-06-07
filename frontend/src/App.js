@@ -15,7 +15,7 @@ function App() {
     e.preventDefault();
 
     //sending API request to backend with Number of Seats(User Entered)
-    const response = await axios.post('http://localhost:5050/api/seatBook',{numberOfseats})
+    const response = await axios.post('https://backendtrainseat.onrender.com/api/seatBook',{numberOfseats})
     console.log(response.data)
     
     setNumberOfseats("")
@@ -63,7 +63,7 @@ function App() {
 
   async function fetchData() {
     try {
-      const response= await axios.get('http://localhost:5050/api/getData')
+      const response= await axios.get('https://backendtrainseat.onrender.com/api/getData')
       setSeatsMap(response.data)
     //  console.log(response.data)
     } catch (error) {
@@ -78,7 +78,7 @@ function App() {
   
       //This is just to reset DB with initial value.
      
-      axios.delete('http://localhost:5050/api/resetData')
+      axios.delete('https://backendtrainseat.onrender.com/api/resetData')
    
       setseatNumbers([])
        window.location.reload(false)
