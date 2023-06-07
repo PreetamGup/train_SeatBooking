@@ -1,0 +1,21 @@
+{
+    "name": "seat-booking",
+    "version": "1.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+      "backend": "cd backend && npm start",
+      "frontend": "cd frontend && npm start",
+      "dev": "concurrently \"npm run backend\" \"npm run frontend\" "
+ 
+    },
+    "author": "preetam",
+    "license": "MIT",
+    "dependencies": {
+      "concurrently": "^7.6.0"
+    },
+    "devDependencies": {
+      "nodemon": "^2.0.21"
+    }
+  }
+  
