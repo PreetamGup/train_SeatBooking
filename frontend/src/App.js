@@ -72,13 +72,13 @@ function App() {
 
   }
 
-  const handleReset =(e)=>{
+  const handleReset =async(e)=>{
     e.preventDefault();
       console.log("reset called")
   
       //This is just to reset DB with initial value.
      
-      axios.delete('https://backendtrainseat.onrender.com/api/resetData')
+    await axios.delete('https://backendtrainseat.onrender.com/api/resetData')
    
       setseatNumbers([])
        window.location.reload(false)
